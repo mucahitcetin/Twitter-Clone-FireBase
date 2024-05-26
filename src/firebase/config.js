@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -15,3 +17,9 @@ const app = initializeApp(firebaseConfig);
 //giriş yapma seçenekleri firebase konsolunda mail ve google olarak seçildi. buraya bu şekilde ekleniyor
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
+
+//veritabanının referansını al
+export const db = getFirestore(app);
+
+// storage ın referansını al
+export const storage = getStorage(app);
