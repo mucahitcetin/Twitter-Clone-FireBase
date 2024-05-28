@@ -5,6 +5,16 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../firebase/config";
 
 const Nav = ({ user }) => {
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      // İsteğe bağlı olarak çıkış yapıldıktan sonra yönlendirme yapabilirsiniz.
+      // Örneğin: window.location.href = "/"; veya react-router-dom'un useNavigate() hooks'u ile navigasyon yapabilirsiniz.
+    } catch (error) {
+      console.error("Error signing out: ", error.message);
+    }
+  };
+
   return (
     <nav className="flex flex-col justify-between items-end px-2 py-4">
       <div>
@@ -34,7 +44,7 @@ const Nav = ({ user }) => {
             </div>
 
             <button
-              onClick={() => signOut(auth)}
+              onClick={handleSignOut}
               className="flex justify-center gap-2 p-1 items-center bg-zinc-700 rounded text-2xl md:text-[15px] transition hover:bg-zinc-900"
             >
               <BiSolidDoorOpen />
