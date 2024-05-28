@@ -241,3 +241,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: black;
 }
+.text-sm {
+  font-size: 0.875rem; /* Varsayılan boyuttan biraz daha küçük bir yazı boyutu */
+}

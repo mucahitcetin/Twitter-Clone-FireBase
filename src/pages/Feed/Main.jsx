@@ -6,28 +6,23 @@ import { db } from "../../firebase/config";
 import Loader from "../../components/Loader";
 
 const Main = ({ user }) => {
-  // abone olunacak kolleksiyonun referansını alalım
   const [tweets, setTweets] = useState();
 
   useEffect(() => {
     const tweetsCol = collection(db, "tweets");
-
-    //sorgu ayarlarını yap
     const q = query(tweetsCol, orderBy("createdAt", "desc"));
 
-    //kolleksiyondaki verilere abone ol
     onSnapshot(q, (snapshot) => {
       const tempTweets = [];
-
       snapshot.docs.map((doc) =>
         tempTweets.push({ ...doc.data(), id: doc.id })
       );
-
       setTweets(tempTweets);
     });
-  });
+  }, []);
+
   return (
-    <div className="border border-zinc-600 overflow-y-auto">
+    <div className="border border-zinc-600 overflow-y-auto max-w-screen-sm mx-auto">
       <header className="border-b border-zinc-600 p-4 font-bold">
         Anasayfa
       </header>
