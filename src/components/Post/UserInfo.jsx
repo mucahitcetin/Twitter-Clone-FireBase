@@ -5,7 +5,6 @@ import { MdEdit } from "react-icons/md";
 
 const UserInfo = ({ tweet }) => {
   let date = tweet.createdAt?.toDate();
-
   date = moment(date).fromNow();
 
   // Kullanıcı adı kontrolü ve düzenleme
@@ -16,7 +15,11 @@ const UserInfo = ({ tweet }) => {
     <div className="flex gap-3 items-center whitespace-nowrap">
       <p>{tweet.user.name}</p>
 
-      {username && <p className="text-gray-400 text-sm">@{username}</p>}
+      {username ? (
+        <p className="text-gray-400 text-sm">@{username}</p>
+      ) : (
+        <p className="text-gray-400 text-sm">@misafir</p>
+      )}
 
       <p className="text-gray-400 text-sm">{date}</p>
 
