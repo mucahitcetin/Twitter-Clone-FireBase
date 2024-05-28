@@ -22,7 +22,7 @@ const Main = ({ user }) => {
   }, []);
 
   return (
-    <div className="border border-zinc-600 overflow-y-auto max-w-screen-sm mx-auto">
+    <div className="border border-zinc-600 overflow-y-auto max-w-screen-sm mx-auto main-content">
       <header className="border-b border-zinc-600 p-4 font-bold">
         Anasayfa
       </header>

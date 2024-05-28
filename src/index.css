@@ -244,3 +244,26 @@ body {
 .text-sm {
   font-size: 0.875rem; /* Varsayılan boyuttan biraz daha küçük bir yazı boyutu */
 }
+@media (max-width: 640px) {
+  .post-image {
+    max-width: 50px; /* Resimlerin maksimum genişliğini küçült */
+    max-height: 100px; /* Resimlerin maksimum yüksekliğini küçült */
+  }
+
+  .post-icon {
+    width: 24px; /* İkonların genişliğini küçült */
+    height: 24px; /* İkonların yüksekliğini küçült */
+  }
+} /* Örnek CSS dosyası */
+@media (max-width: 768px) {
+  .main-content {
+    font-size: 0.775rem; /* Yazı boyutunu küçült */
+  }
+  .content-text {
+    font-size: 0.875rem; /* Metin boyutunu küçült */
+  }
+
+  .content-image {
+    max-height: 300px; /* Görsel maksimum yüksekliğini küçült */
+  }
+}

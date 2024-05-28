@@ -36,7 +36,7 @@ const Nav = ({ user }) => {
           <div className="flex flex-col gap-5">
             <div className="flex flex-col items-center gap-2">
               <img
-                className="rounded-full max-w-[45px]"
+                className="rounded-full max-w-[40px] md:max-w-[45px]"
                 src={user.photoURL}
                 alt={user.displayName}
               />
@@ -45,7 +45,7 @@ const Nav = ({ user }) => {
 
             <button
               onClick={handleSignOut}
-              className="flex justify-center gap-2 p-1 items-center bg-zinc-700 rounded text-2xl md:text-[15px] transition hover:bg-zinc-900"
+              className="flex justify-center gap-2 p-1 items-center bg-zinc-700 rounded text-[14px] md:text-[15px] transition hover:bg-zinc-900"
             >
               <BiSolidDoorOpen />
 
