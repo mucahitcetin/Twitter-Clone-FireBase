@@ -226,3 +226,18 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+.html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+}

@@ -27,7 +27,7 @@ const Main = ({ user }) => {
     });
   });
   return (
-    <main className="border border-zinc-600 overflow-y-auto">
+    <div className="border border-zinc-600 overflow-y-auto">
       <header className="border-b border-zinc-600 p-4 font-bold">
         Anasayfa
       </header>
@@ -41,7 +41,7 @@ const Main = ({ user }) => {
       ) : (
         tweets.map((tweet) => <Post key={tweet.id} tweet={tweet} />)
       )}
-    </main>
+    </div>
   );
 };
 
